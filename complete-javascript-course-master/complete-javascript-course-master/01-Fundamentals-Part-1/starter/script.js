@@ -151,3 +151,100 @@
 // }
 
 // console.log(BMI, BMI2, markHeigherBMI);
+
+//type conversion
+
+// const thisYear = "1992"; //as a string
+
+// console.log(Number(thisYear), thisYear); //first output as a number
+
+// console.log(Number(thisYear) + 8); // to add a number
+
+// console.log(Number("basit")); //cannot convert as the string does not have number
+// //number to a string
+
+// console.log(String(123));
+
+// //type coercion
+// // conversion done by javascript
+
+// console.log("I am" + 23 + "years old"); //here number in between was converted to string
+
+// console.log("23" - 10 - "3");
+
+// let n = "1" + 1; //here it will become a string as '11'
+
+// n = n - 1; //here 11 will act as number and ans will be 11 - 1 = 10
+
+// console.log(n); //10 will be printed
+
+//Truthy and Falsy Values
+
+//falsy values 5 :-> 0, '', null, undefined, NaN
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
+
+// //everything else is thruthy values
+// console.log(Boolean(1));
+// console.log(Boolean(2));
+// console.log(Boolean("assa"));
+
+// //example of falsy value
+
+// let salary = 0;
+
+// if (salary) {
+//   console.log(`You do not need a job`);
+// } else {
+//   console.log(`you sould get a job as your salary is 0`);
+// }
+
+// //example of truthy values
+
+// let salary2 = 100;
+
+// if (salary2) {
+//   console.log(`You do not need a job`);
+// } else {
+//   console.log(`you sould get a job as your salary is 0`);
+// }
+
+// //another example of falsy values as undefined
+
+// let currSal; //undefined value
+// if (currSal) {
+//   console.log(`Defined current salary`);
+// } else {
+//   console.log(`Undefined current salary`);
+// }
+
+//prompt function
+
+// const fav = prompt("whats your favourite window");
+// console.log(fav);
+
+//coding challenge 3
+const dolphinS1 = 96;
+const dolphinS2 = 108;
+const dolphinS3 = 89;
+
+const avgDolphin = (dolphinS1 + dolphinS2 + dolphinS3) / 3;
+
+const koalasS1 = 188;
+const koalasS2 = 91;
+const koalasS3 = 110;
+
+const avgKoalas = (koalasS1 + koalasS2 + koalasS3) / 3;
+
+if (avgDolphin > avgKoalas && avgDolphin >= 100) {
+  console.log(`Dolphin team wins`);
+} else if (avgDolphin === avgKoalas && avgDolphin >= 100) {
+  console.log(`Draw`);
+} else if (avgKoalas > avgDolphin && avgKoalas >= 100) {
+  console.log(`Koalas team wins`);
+} else {
+  console.log(`No team won`);
+}
