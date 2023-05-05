@@ -227,24 +227,24 @@
 // console.log(fav);
 
 //coding challenge 3
-const dolphinS1 = 96;
-const dolphinS2 = 108;
-const dolphinS3 = 89;
+// const dolphinS1 = 96;
+// const dolphinS2 = 108;
+// const dolphinS3 = 89;
 
-const avgDolphin = (dolphinS1 + dolphinS2 + dolphinS3) / 3;
+// const avgDolphin = (dolphinS1 + dolphinS2 + dolphinS3) / 3;
 
-const koalasS1 = 188;
-const koalasS2 = 91;
-const koalasS3 = 110;
+// const koalasS1 = 188;
+// const koalasS2 = 91;
+// const koalasS3 = 110;
 
-const avgKoalas = (koalasS1 + koalasS2 + koalasS3) / 3;
+// const avgKoalas = (koalasS1 + koalasS2 + koalasS3) / 3;
 
-if (avgDolphin > avgKoalas && avgDolphin >= 100) {
-  console.log(`Dolphin team wins`);
-} else if (avgDolphin === avgKoalas && avgDolphin >= 100) {
-  console.log(`Draw`);
-} else if (avgKoalas > avgDolphin && avgKoalas >= 100) {
-  console.log(`Koalas team wins`);
-} else {
-  console.log(`No team won`);
-}
+// if (avgDolphin > avgKoalas && avgDolphin >= 100) {
+//   console.log(`Dolphin team wins`);
+// } else if (avgDolphin === avgKoalas && avgDolphin >= 100) {
+//   console.log(`Draw`);
+// } else if (avgKoalas > avgDolphin && avgKoalas >= 100) {
+//   console.log(`Koalas team wins`);
+// } else {
+//   console.log(`No team won`);
+// }
