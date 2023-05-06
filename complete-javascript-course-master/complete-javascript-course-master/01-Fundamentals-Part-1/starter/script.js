@@ -248,3 +248,23 @@
 // } else {
 //   console.log(`No team won`);
 // }
+
+//ternary operator
+
+const age = 18;
+
+age >= 18 ? console.log(`first choice`) : console.log(`second choice`);
+
+//coding challenge 4
+
+let tip;
+
+let bill = 400;
+
+bill > 50 && bill < 300 ? (tip = (15 / 100) * bill) : (tip = (2 / 10) * bill);
+
+console.log(
+  `Your bill value is ${bill} and the tip amount is ${tip}, Total value paid is ${
+    bill + tip
+  }`
+);
