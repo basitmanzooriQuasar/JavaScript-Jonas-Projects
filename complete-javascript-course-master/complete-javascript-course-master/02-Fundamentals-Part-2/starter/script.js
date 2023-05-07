@@ -56,3 +56,41 @@
 // console.log(ans2);
 
 //Arrow Function
+//Shorter and faster to write
+
+// function calcAge1(birthYear) {
+//   return 2023 - birthYear;
+// }
+
+// //arrow function syntax
+// const calAge3 = (birthYear) => 2023 - birthYear; //store in variable calAge
+
+// const age = calAge3(1998);
+
+// console.log(age);
+
+// const yearsUntilRetire = (birthYear) => {
+//   const age = 2023 - birthYear;
+//   const retirement = 65 - age;
+//   return retirement;
+// };
+
+// console.log(yearsUntilRetire(1996));
+
+//functions calling other functions
+
+//to cut into pieces
+// function cutFruit(fruit) {
+//   return fruit * 4;
+// }
+// //to make juice
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruit(apples); //calling other function
+//   const orangePieces = cutFruit(oranges); //calling other function
+
+//   const juice = `Juice with ${apples} apples of ${applePieces} pieces and ${oranges} oranges of ${orangePieces} pieces`;
+//   return juice;
+// }
+
+// const ans = fruitProcessor(2, 3);
+// console.log(ans);
