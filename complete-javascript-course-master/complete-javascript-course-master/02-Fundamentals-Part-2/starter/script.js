@@ -262,3 +262,121 @@
 // }
 
 //Loops: the FOR loop iteration
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// //getting elements of the array
+// const friends = ["Basit", "Danish", "Abbas", true];
+
+// for (let i = 0; i < friends.length; i++) {
+//   console.log(friends[i], typeof friends[i]);
+// }
+
+// //creating a new array with the types of other array
+// const types = [];
+
+// for (let i = 0; i < friends.length; i++) {
+//   types[i] = typeof friends[i];
+// }
+
+// console.log(types);
+
+// //add using push operation
+// for (let i = 0; i < friends.length; i++) {
+//   types.push(typeof friends[i]);
+// }
+// console.log(types);
+
+// //continue and break statements
+
+// //continue: is to access the current iteration of the loop and conitnue to the next one
+
+// //break: to completely terminate the whole loop
+
+// for (let i = 0; i < 11; i++) {
+//   if (i === 6) continue; //it skips this condition and continues the loop
+//   console.log(i);
+// }
+// //other example, if we only need strings
+// const temp = ["basit", "john", 23, "king", true]; //array with strings, number and boolean
+
+// for (let i = 0; i < temp.length; i++) {
+//   //this loop will only print string elements from the temp array, since it will continue to the next one if it encounters a non string element
+//   if (typeof temp[i] !== "string") {
+//     continue;
+//   }
+//   console.log(temp[i]);
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 7) {
+//     //it breaks the whole loop when it reaches this condition
+//     break;
+//   }
+//   console.log(i);
+// }
+
+// const temp = ["basit", "john", 23, "king", true];
+// //looping backwards
+// for (let i = temp.length - 1; i >= 0; i--) {
+//   console.log(temp[i]);
+// }
+
+// //nested loop/ loop in loop
+// for (let i = 1; i <= 4; i++) {
+//   console.log(`this is outer loop ${i}`);
+//   for (let j = 1; j < 5; j++) {
+//     console.log(`this is inner loop ${j}`);
+//   }
+// }
+
+// //While loop
+// let rep = 1;
+
+// //while loop contains condition
+// while (rep <= 10) {
+//   //run this loop till the rep is less than 11
+//   console.log(`This is the value of rep ${rep}`);
+//   rep++; //iteration
+// }
+//loop will end when the value of rep does not satisfy the condition
+
+//random varaible, rolling a dice
+//run loop when the dice hits 6
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// // console.log(dice);
+
+// while (dice !== 6) {
+//   console.log(`dice number is ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+// }
+
+//coding challenge 4
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const total = [];
+
+function calcTip(bill) {
+  let tip;
+  if (bill > 50 && bill < 300) {
+    tip = (15 / 100) * bill;
+  } else {
+    tip = (20 / 100) * bill;
+  }
+  return tip;
+}
+
+for (let i = 0; i < bills.length; i++) {
+  tips[i] = calcTip(bills[i]);
+}
+for (let i = 0; i < bills.length; i++) {
+  total[i] = bills[i] + tips[i];
+}
+
+console.log(tips);
+console.log(total);
