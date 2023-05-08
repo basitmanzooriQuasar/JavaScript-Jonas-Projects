@@ -189,3 +189,5 @@
 // console.log(bills);
 // console.log(tips);
 // console.log(total);
+
+//Objects Data structure
