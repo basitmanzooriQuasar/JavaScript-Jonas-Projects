@@ -190,4 +190,75 @@
 // console.log(tips);
 // console.log(total);
 
-//Objects Data structure
+// //Objects Data structure
+// //curly braces used to define objects here
+// const portfolio = {
+//   firstName: "Basit",
+//   lastName: "Manzoor",
+//   age: 2023 - 1998,
+//   job: "SDE",
+//   friends: ["steven", "john"],
+// };
+// //property : value
+// console.log(portfolio);
+
+// //using Dot notation to get values of properties from objects
+// console.log(portfolio.lastName);
+// //using Bracket notation to get values of properties from objects
+// console.log(portfolio["lastName"]);
+
+// portfolio.location = "India";
+// portfolio["Linkedin"] = "@basitmanzoor";
+
+// console.log(portfolio);
+
+// portfolio.bestfriend = portfolio.friends[0];
+// console.log(portfolio);
+
+// //object Methods
+// const portfolio = {
+//   firstName: "Basit",
+//   lastName: "Manzoor",
+//   birthYear: 1998,
+//   job: "SDE",
+//   friends: ["steven", "john"],
+//   hasLincense: true,
+//   calcAge: function (birthYear) {
+//     //function expression
+//     return 2023 - birthYear;
+//   },
+// };
+
+// console.log(portfolio.calcAge(1992));
+// console.log(portfolio["calcAge"](1992));
+// console.log(portfolio.calcAge(portfolio.birthYear));
+
+// //coding challenge 3
+
+// const Mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.BMI = this.mass / this.height ** 2;
+//     return this.BMI;
+//   },
+// };
+
+// const John = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.BMI = this.mass / this.height ** 2;
+//     return this.BMI;
+//   },
+// };
+
+// if (Mark.BMI > John.BMI) {
+//   console.log(`Mark has higher BMI of ${Mark.BMI}`);
+// } else {
+//   console.log(`John has higher BMI of ${John.calcBMI()}`);
+// }
+
+//Loops: the FOR loop iteration
