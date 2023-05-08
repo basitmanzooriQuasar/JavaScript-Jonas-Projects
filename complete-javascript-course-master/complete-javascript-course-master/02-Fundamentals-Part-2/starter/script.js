@@ -141,3 +141,51 @@
 
 // const years = [1990, 1991, 1992, 1993];
 // console.log(calcAge(years[3]));
+
+//array methods or operations
+
+// const friends = ["Basit", "Steven", "Raj"];
+
+// //add at last
+// friends.push("Kumar");
+
+// //add at beginning
+// friends.unshift("khan");
+
+// console.log(friends);
+
+// //remove at last
+// friends.pop();
+
+// //remove at start
+// friends.shift();
+
+// console.log(friends);
+
+// //check the index of element
+// console.log(friends.indexOf("Raj"));
+// console.log(friends.indexOf("nana")); //will return -1 since no such element is present
+
+// //check if the element is present in the array
+// console.log(friends.includes("Raj")); //true since present
+// console.log(friends.includes("nana")); //false since not present
+
+//coding challenge 2
+
+// function calcTip(bill) {
+//   let tip;
+//   if (bill > 50 && bill < 300) {
+//     tip = (15 / 100) * bill;
+//   } else {
+//     tip = (20 / 100) * bill;
+//   }
+//   return tip;
+// }
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(bills);
+// console.log(tips);
+// console.log(total);
