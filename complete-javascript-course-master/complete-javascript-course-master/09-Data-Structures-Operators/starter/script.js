@@ -60,6 +60,38 @@ const restaurant = {
 // let { menu, name, openingHours } = restaurant;
 // console.log(menu, name, openingHours); //menu will show undefined as it does not exist in the object
 
-let { menu = [], name: newName = [], categories: newCat = [] } = restaurant;
+// let { menu = [], name: newName = [], categories: newCat = [] } = restaurant;
 
-console.log(menu, newName, newCat); //menu does not exist but is assigned default value instead of undefined
+// console.log(menu, newName, newCat); //menu does not exist but is assigned default value instead of undefined
+
+//mutating variables in objects using destructuring
+let a = 19;
+let b = 12;
+
+const obj = {
+  a: 10,
+  b: 20,
+  c: 30,
+};
+
+({ a, b } = obj);
+console.log(a, b); //will print the mutated values of variables
+
+//nested objects
+
+const {
+  fri: { open, close },
+} = restaurant.openingHours;
+console.log(open, close);
+
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = numbers;
+
+console.log(first);
+// Result: 1
+
+console.log(second);
+// Result: 2
+
+console.log(rest);
+// Result: [3, 4, 5]
