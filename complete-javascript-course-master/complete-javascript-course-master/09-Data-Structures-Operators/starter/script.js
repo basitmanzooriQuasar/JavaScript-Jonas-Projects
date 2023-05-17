@@ -28,14 +28,38 @@ const restaurant = {
   },
 };
 
-const [x, y] = restaurant.categories;
-console.log(x, y);
-let [a, , b] = restaurant.mainMenu;
-console.log(a, b);
-[b, a] = [a, b];
-console.log(a, b);
-// const arr = [1, 2, 3];
-// console.log(arr[2]);
+// const [x, y] = restaurant.categories;
+// console.log(x, y);
+// let [a, , b] = restaurant.mainMenu;
+// console.log(a, b);
+// [b, a] = [a, b];
+// console.log(a, b);
+// // const arr = [1, 2, 3];
+// // console.log(arr[2]);
 
-// const [x, y] = arr;
-// console.log(y);
+// // const [x, y] = arr;
+// // console.log(y);
+
+// const nested = [2, 3, 4, [9, 19]];
+// // const [i, , , j] = nested;
+// // console.log(i, j);
+
+// //inorder to get elements of nested array using destructuring of array
+// const [i, , , [j, k]] = nested;
+// console.log(i, j, k);
+
+// //destructuring objects
+// let { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+// //if we want to change the name of the object properties
+
+// let { name: newName, openingHours: hours } = restaurant;
+// console.log(newName, hours);
+
+// let { menu, name, openingHours } = restaurant;
+// console.log(menu, name, openingHours); //menu will show undefined as it does not exist in the object
+
+let { menu = [], name: newName = [], categories: newCat = [] } = restaurant;
+
+console.log(menu, newName, newCat); //menu does not exist but is assigned default value instead of undefined
