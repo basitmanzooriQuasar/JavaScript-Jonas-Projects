@@ -27,3 +27,15 @@ const restaurant = {
     },
   },
 };
+
+const [x, y] = restaurant.categories;
+console.log(x, y);
+let [a, , b] = restaurant.mainMenu;
+console.log(a, b);
+[b, a] = [a, b];
+console.log(a, b);
+// const arr = [1, 2, 3];
+// console.log(arr[2]);
+
+// const [x, y] = arr;
+// console.log(y);
