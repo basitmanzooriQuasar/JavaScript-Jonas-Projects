@@ -155,3 +155,76 @@
 // rest2.owner &&= '<Annonymous>';
 // console.log(rest1);
 // console.log(rest2);
+
+//coding challenge 1
+const game = {
+  team1: 'Real Madrid',
+  team2: 'Manchester City',
+  players: [
+    [
+      'Courtios',
+      'Militao',
+      'Alaba',
+      'Carajal',
+      'Camavinga',
+      'Valverde',
+      'Kroos',
+      'Modric',
+      'Vini Jr',
+      'Benzema',
+      'Rodrygo',
+    ],
+    [
+      'Ederson',
+      'Walker',
+      'Ruben Dias',
+      'Akanji',
+      'Nathen Ake',
+      'Rodri',
+      'Gundogen',
+      'Kevin De Bryne',
+      'Bernado Silva',
+      'Haaland',
+      'Jack Gearlish',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Vini Jr', 'Benzema', 'Rodrygo', 'Benzema'],
+  date: 'May 18th, 2023',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+const [player1, player2] = game.players;
+console.log(player1, player2);
+
+const [gk1, ...fieldPlayer1] = player1;
+
+const [gk2, ...fieldPlayer2] = player2;
+console.log(fieldPlayer1);
+
+const allPlayers = [...player1, ...player2];
+
+const player1final = [...player1, 'Asensio', 'Touchmeni', 'Ceballos'];
+
+console.log(player1final);
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+const printGoals = function (...playerGoals) {
+  console.log(`${playerGoals.length} goals were scored by `);
+};
+
+printGoals(...game.scored);
+
+//morelikely to win, lower odd wins
+
+team1 < team2 && console.log('Team 1 is more likely to win');
+
+team1 > team2 && console.log('Team 2 is more likely to win');
