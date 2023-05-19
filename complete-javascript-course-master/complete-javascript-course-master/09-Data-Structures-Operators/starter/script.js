@@ -238,68 +238,135 @@
 // //for getting indexes
 // for (let item of arr.entries()) console.log(item);
 
-//coding challenge 2
+// //coding challenge 2
 
-const game = {
-  team1: 'Real Madrid',
-  team2: 'Manchester City',
-  players: [
-    [
-      'Courtios',
-      'Militao',
-      'Alaba',
-      'Carajal',
-      'Camavinga',
-      'Valverde',
-      'Kroos',
-      'Modric',
-      'Vini Jr',
-      'Benzema',
-      'Rodrygo',
-    ],
-    [
-      'Ederson',
-      'Walker',
-      'Ruben Dias',
-      'Akanji',
-      'Nathen Ake',
-      'Rodri',
-      'Gundogen',
-      'Kevin De Bryne',
-      'Bernado Silva',
-      'Haaland',
-      'Jack Gearlish',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Vini Jr', 'Benzema', 'Rodrygo', 'Benzema'],
-  date: 'May 18th, 2023',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: 'Real Madrid',
+//   team2: 'Manchester City',
+//   players: [
+//     [
+//       'Courtios',
+//       'Militao',
+//       'Alaba',
+//       'Carajal',
+//       'Camavinga',
+//       'Valverde',
+//       'Kroos',
+//       'Modric',
+//       'Vini Jr',
+//       'Benzema',
+//       'Rodrygo',
+//     ],
+//     [
+//       'Ederson',
+//       'Walker',
+//       'Ruben Dias',
+//       'Akanji',
+//       'Nathen Ake',
+//       'Rodri',
+//       'Gundogen',
+//       'Kevin De Bryne',
+//       'Bernado Silva',
+//       'Haaland',
+//       'Jack Gearlish',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Vini Jr', 'Benzema', 'Rodrygo', 'Benzema'],
+//   date: 'May 18th, 2023',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-//code for 1
-for (const [index, scorer] of game.scored.entries()) {
-  console.log(`Goal ${index + 1}: ${scorer}`);
-}
+// //code for 1
+// for (const [index, scorer] of game.scored.entries()) {
+//   console.log(`Goal ${index + 1}: ${scorer}`);
+// }
 
-//code for 2
-const keys = Object.values(game.odds);
-let sum = 0;
-for (const key of keys) {
-  sum += key;
-}
-let avg = sum / keys.length;
-console.log(avg);
+// //code for 2
+// const keys = Object.values(game.odds);
+// let sum = 0;
+// for (const key of keys) {
+//   sum += key;
+// }
+// let avg = sum / keys.length;
+// console.log(avg);
 
-// const {
-//   odds: { team1: RealMadrid, x: draw, team2: ManchesterCity },
-// } = game;
-//code for 3
-for (const [prop, key] of Object.entries(game.odds)) {
-  const teamStr = prop === 'x' ? 'draw' : `Victory ${game[prop]}`;
-  console.log(`Odd of victory ${teamStr}: ${key}`);
-}
+// // const {
+// //   odds: { team1: RealMadrid, x: draw, team2: ManchesterCity },
+// // } = game;
+// //code for 3
+// for (const [prop, key] of Object.entries(game.odds)) {
+//   const teamStr = prop === 'x' ? 'draw' : `Victory ${game[prop]}`;
+//   console.log(`Odd of victory ${teamStr}: ${key}`);
+// }
+
+// //Sets
+
+// const ordersSet = new Set(['Pizza', 'Paasta', 'Burger', 'Burger', 'Pizza']);
+
+// console.log(ordersSet);
+
+// ordersSet.add('Basit');
+// ordersSet.add('Basit');
+// ordersSet.delete('Pizza');
+
+// //ordersSet.clear(); //deletes all the elements from the set
+// console.log(ordersSet.has('Pizza')); //checks if the element is in the set
+// console.log(ordersSet.has('Basit'));
+
+// //iteration in sets
+// for (const order of ordersSet) {
+//   console.log(order);
+// }
+
+// //example on sets to remove duplicates
+// const temp = [1, 2, 3, 4, 4, 5, 5, 6, 1];
+
+// const tempSet = new Set(temp);
+// console.log(tempSet);
+
+// //conversion of set to array
+// const tempSetarray = [...new Set(temp)];
+// console.log(tempSetarray);
+
+const rest = new Map(); //empty map
+
+rest.set('name', 'baba ji'); //mapname.set(KEY, VALUE)
+rest.set(1, 'lsibon');
+rest.set(2, [1, 2, 3, 4]);
+
+console.log(rest.set('nana', 'asas')); //returns the whole map
+
+//in order to add multiple key value pairs in one statement
+rest
+  .set('categories', ['tandoori', 'rajma', 'biryani'])
+  .set('open', 11)
+  .set(true, 'We are open')
+  .set(false, 'We are closed');
+
+//.get is used to get value of that key
+console.log(rest.get(true));
+
+//check if the element is present
+console.log(rest.has(true));
+
+//delete
+// rest.delete(nana);
+console.log(rest);
+rest.delete('nana'); //nana deleted
+console.log(rest);
+
+//size of map
+console.log(rest.size);
+
+rest.set([1, 2], 'Test');
+console.log(rest.get([1, 2])); //this will not work as it becomes diff array then the one we have in the map
+
+//so we store that arr first
+const arr = [1, 2];
+rest.set(arr, 'Test1');
+console.log(rest.get(arr));
