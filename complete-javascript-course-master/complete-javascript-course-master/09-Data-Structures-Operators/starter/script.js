@@ -4,29 +4,29 @@
 // const flights =
 //   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-// // Data needed for first part of the section
-// const restaurant = {
-//   name: 'Classico Italiano',
-//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
-//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// Data needed for first part of the section
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-//   openingHours: {
-//     thu: {
-//       open: 12,
-//       close: 22,
-//     },
-//     fri: {
-//       open: 11,
-//       close: 23,
-//     },
-//     sat: {
-//       open: 0, // Open 24 hours
-//       close: 24,
-//     },
-//   },
-// };
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+};
 
 // // const [x, y] = restaurant.categories;
 // // console.log(x, y);
@@ -333,40 +333,117 @@
 // const tempSetarray = [...new Set(temp)];
 // console.log(tempSetarray);
 
-const rest = new Map(); //empty map
+// const rest = new Map(); //empty map
 
-rest.set('name', 'baba ji'); //mapname.set(KEY, VALUE)
-rest.set(1, 'lsibon');
-rest.set(2, [1, 2, 3, 4]);
+// rest.set('name', 'baba ji'); //mapname.set(KEY, VALUE)
+// rest.set(1, 'lsibon');
+// rest.set(2, [1, 2, 3, 4]);
 
-console.log(rest.set('nana', 'asas')); //returns the whole map
+// console.log(rest.set('nana', 'asas')); //returns the whole map
 
-//in order to add multiple key value pairs in one statement
-rest
-  .set('categories', ['tandoori', 'rajma', 'biryani'])
-  .set('open', 11)
-  .set(true, 'We are open')
-  .set(false, 'We are closed');
+// //in order to add multiple key value pairs in one statement
+// rest
+//   .set('categories', ['tandoori', 'rajma', 'biryani'])
+//   .set('open', 11)
+//   .set(true, 'We are open')
+//   .set(false, 'We are closed');
 
-//.get is used to get value of that key
-console.log(rest.get(true));
+// //.get is used to get value of that key
+// console.log(rest.get(true));
 
-//check if the element is present
-console.log(rest.has(true));
+// //check if the element is present
+// console.log(rest.has(true));
 
-//delete
-// rest.delete(nana);
-console.log(rest);
-rest.delete('nana'); //nana deleted
-console.log(rest);
+// //delete
+// // rest.delete(nana);
+// console.log(rest);
+// rest.delete('nana'); //nana deleted
+// console.log(rest);
 
-//size of map
-console.log(rest.size);
+// //size of map
+// console.log(rest.size);
 
-rest.set([1, 2], 'Test');
-console.log(rest.get([1, 2])); //this will not work as it becomes diff array then the one we have in the map
+// rest.set([1, 2], 'Test');
+// console.log(rest.get([1, 2])); //this will not work as it becomes diff array then the one we have in the map
 
-//so we store that arr first
-const arr = [1, 2];
-rest.set(arr, 'Test1');
-console.log(rest.get(arr));
+// //so we store that arr first
+// const arr = [1, 2];
+// rest.set(arr, 'Test1');
+// console.log(rest.get(arr));
+
+// //maps iteration
+// const question = new Map([
+//   ['question', 'What is the best prog lang in the world?'],
+//   [1, 'C'],
+//   [2, 'java'],
+//   [3, 'javascript'],
+//   ['correct', 3],
+//   [true, 'Correct 💥'],
+//   [false, 'try again'],
+// ]);
+
+// console.log(question);
+
+// //convert object to map
+// const hoursMap = new Map(Object.entries(restaurant.openingHours));
+
+// console.log(hoursMap);
+
+// //iteration
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key} : ${value}`);
+// }
+
+// const answer = Number(prompt('Your Answer'));
+// console.log(answer);
+// console.log(question.get(answer === question.get('correct')));
+
+// //strings
+// const airline = 'Go Air India';
+// const plane = 'A320';
+
+// //get characters at certain position, (same as numbers)
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// //length
+// console.log(airline.length);
+// //methods
+// console.log(airline.indexOf('i')); //if the cahr is not present, we get -1 (first index)
+// console.log(airline.lastIndexOf('i')); //gives the last index
+// console.log(airline.slice(4)); //at which the extraction happens(0 based indexing)
+// console.log(airline.slice(3, 8)); //start and end parameneters given, does not include the end index
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// //extracting from tht end. use negative indexes
+// console.log(airline.slice(-2));
+
+//lower case and upper case
+const str = 'HeLLoOOo';
+const lowStr = str.toLowerCase();
+const highStr = str.toUpperCase();
+
+console.log(lowStr);
+console.log(highStr);
+
+//captilise
+const correctCase = lowStr[0].toUpperCase() + lowStr.slice(1);
+console.log(correctCase);
+
+//trim
+const loginEmail = '  BasIT1107@Gmail.com  \n';
+
+const correctEmail = loginEmail.toLowerCase().trim();
+console.log(correctEmail);
+
+//replace
+const priceG = '233,334€';
+const priceUs = priceG.replace('€', '$').replace(',', '.');
+console.log(priceUs);
+const newStr = 'Hey I am Basit and I live in Kashmir';
+const arrSplit = newStr.split(' ');
+
+console.log(arrSplit);
