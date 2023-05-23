@@ -61,6 +61,33 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
+  //.textContent = 0;
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+    const html = `<div class="movements__row">
+    <div class="movements__type movements__type--${type}">${i + 1}${type}</div>
+    <div class="movements__value">${mov}</div>
+  </div>`;
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+displayMovements(account1.movements);
+
+//computing username
+const createUsername = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUsername(accounts);
+
 // /////////////////////////////////////////////////
 // /////////////////////////////////////////////////
 // // LECTURES
@@ -100,3 +127,22 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // A.forEach(function (value, _, set) {
 //   console.log(`${value} of map ${set}`);
 // });
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const conv = 82.82;
+
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * conv;
+// });
+
+// console.log(movements);
+// console.log(movementsUSD);
+const depo = movements.filter(mov => mov > 0);
+
+console.log(depo);
+
+//accumulator is like snowball
+const reduceArr = movements.reduce(function (accum, curr, i, arr) {
+  return accum + curr;
+}, 0);
+console.log(reduceArr);
