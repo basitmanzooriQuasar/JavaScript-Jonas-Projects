@@ -61,16 +61,42 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
+// /////////////////////////////////////////////////
+// /////////////////////////////////////////////////
+// // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// /////////////////////////////////////////////////
+// //forEach loop
+// movements.forEach(function (ele) {
+//   if (ele > 0) {
+//     console.log(`less ele is ${ele}`);
+//   } else {
+//     console.log(Math.abs(ele));
+//   }
+// });
 
-/////////////////////////////////////////////////
+// //in order to access index values in forEach method
+// movements.forEach(function (currElement, index, array) {
+//   console.log(`Movement ${index}: ${currElement} of array ${array}`);
+// });
+// //(currentelement, index, array) forEach order of parameters
+
+// //forEach for maps and sets
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
+
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key} is key of value ${value} in map ${map}`);
+// });
+
+// //for sets
+// const A = new Set(['a', 'b', 'c']);
+
+// A.forEach(function (value, _, set) {
+//   console.log(`${value} of map ${set}`);
+// });

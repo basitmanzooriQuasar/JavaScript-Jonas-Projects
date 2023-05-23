@@ -128,3 +128,33 @@
 // console.log(swiss);
 
 // book.call(swiss, ...flightData);
+
+// //bind method
+// book.call(eurowings, 23, 'Basit Manzoor');
+
+// const bookEw = book.bind(eurowings);
+// bookEw(222, ' Baba Blacksheep');
+// const bookSw = book.bind(swiss);
+// bookSw(232, 'Raja ji');
+
+// //passing one argument before
+// const bookEW23 = book.bind(eurowings, 2221);
+
+// //now the function needs onlt the remaining arguments
+// bookEW23('Gumnaam insaan ');
+
+// Immediately Invoked Function Expressions (IIFE)
+const runOnce = function () {
+  console.log('This will never run again');
+};
+runOnce();
+
+// IIFE
+(function () {
+  console.log('This will never run again');
+  const isPrivate = 23;
+})();
+
+// console.log(isPrivate);
+
+(() => console.log('This will ALSO never run again'))();
