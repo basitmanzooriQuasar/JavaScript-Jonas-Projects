@@ -65,12 +65,33 @@ btnScrollTo.addEventListener('click', function (e) {
   sectionOp.scrollIntoView({ behavior: 'smooth' });
 });
 
-//adding and deleting Event listener after it is hovered
-const h1 = document.querySelector('h1');
+// //adding and deleting Event listener after it is hovered
+// const h1 = document.querySelector('h1');
 
-const h1alert = function (e) {
-  alert('This is an EventListener and you hovered on heading 1');
+// const h1alert = function (e) {
+//   alert('This is an EventListener and you hovered on heading 1');
 
-  h1.removeEventListener('mouseover', h1alert);
-};
-h1.addEventListener('mouseover', h1alert);
+//   h1.removeEventListener('mouseover', h1alert);
+// };
+// h1.addEventListener('mouseover', h1alert);
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+//event delegation
+//1. Add event listener to common parent element
+//2. Determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  //matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
