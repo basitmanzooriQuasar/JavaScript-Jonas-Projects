@@ -33,5 +33,5 @@ const getCountryData = function (country) {
 };
 
 getCountryData('Germany');
-getCountryData('spain');
 getCountryData('brazil');
+getCountryData('pakistan');
